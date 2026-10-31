@@ -11,8 +11,8 @@ from haylou_tools.tbwf import DIAL_NAME, SPEC_NAME
 from haylou_tools.tbwf import DIAL_SIZE as SIZE
 from PIL import Image, ImageChops
 
-import build_face
-from build_face import FONT, PALETTES, ROOT, SPRITE, juma_spec
+from faces.juma import build as build_face
+from faces.juma.build import FONT, PALETTES, ROOT, SPRITE, juma_spec
 
 JUMA = str(FONT)
 DRIFT_PX = 2
@@ -160,7 +160,7 @@ def same_spec(built, committed):
 def test_committed_faces_match_this_code(name, tmp_path):
     build_face.build(name, tmp_path, tmp_path)
     built = read(tmp_path / ("juma-%s.tbwf" % name))
-    committed = read(ROOT / "faces" / ("juma-%s.tbwf" % name))
+    committed = read(ROOT / "tbwf" / ("juma-%s.tbwf" % name))
     assert built.keys() == committed.keys()
     assert same_spec(build_spec(built), build_spec(committed))
     pictures = [Image.open(BytesIO(faces[DIAL_NAME])).convert("L") for faces in (built, committed)]

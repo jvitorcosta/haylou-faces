@@ -50,7 +50,7 @@ So our job shrank to writing a valid `.tbwf`. It's a ZIP holding:
 
 ## 4. Generating faces
 
-`build_face.py` builds the whole face from a sprite, using the toolkit to write the ZIP. Anything
+`build.py` builds the whole face from a sprite, using the toolkit to write the ZIP. Anything
 fixed, like the cub, name and icons, is drawn into the background image. Anything live, like the time, steps and battery, stays as text
 for the app to draw.
 

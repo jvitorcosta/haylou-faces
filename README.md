@@ -1,17 +1,20 @@
-# Juma
+# Haylou faces
 
-A cute jaguar cub watch face for the **Haylou RT (LS05S)**, peeking over a ledge above the time.
+Custom watch faces for the **Haylou RT (LS05S)**, built with
+[haylou-rt-tools](https://github.com/jvitorcosta/haylou-rt-tools).
 
-| Pantanal | Sakura | Jungle | Sky |
-|---|---|---|---|
-| ![Pantanal](previews/preview-pantanal.png) | ![Sakura](previews/preview-sakura.png) | ![Jungle](previews/preview-jungle.png) | ![Sky](previews/preview-sky.png) |
+## Faces
 
-These are PC previews. The face isn't yet confirmed on a real watch, so what you see there may differ
-slightly. A photo in an issue is very welcome.
+| Face | Preview | About |
+|---|---|---|
+| [Juma](faces/juma) | ![Juma](faces/juma/previews/preview-pantanal.png) | A jaguar cub peeking over a ledge, in four palettes |
 
-## Install it
+These are PC previews, and none of these faces is confirmed on a real watch yet, so what you see
+there may differ slightly. A photo in an issue is very welcome.
 
-1. Download a face from [faces/](faces).
+## Install a face
+
+1. Download a `.tbwf` from the face's `tbwf/` folder.
 2. Copy it to your phone.
 3. Pair [Hello Haylou](https://play.google.com/store/apps/details?id=hu.tiborsosdevs.haylou.hello) in
    Standalone mode.
@@ -19,7 +22,7 @@ slightly. A photo in an issue is very welcome.
 
 Tested only with Hello Haylou 3.7.19 on firmware `V21.01.004.2.1.1.3.51`.
 
-## Build it
+## Build the faces
 
 Needs Python 3.10 or newer.
 
@@ -27,31 +30,22 @@ Needs Python 3.10 or newer.
 pip install -r requirements.txt
 ```
 
-```bash
-python build_face.py
-```
-
-That rebuilds every face into `faces/` and `previews/`. Name a palette to build one:
-
-```bash
-python build_face.py pantanal
-```
-
-Add a palette to `PALETTES` in [build_face.py](build_face.py). The tests check its contrast and that
-nothing overlaps or gets clipped by the round screen:
+Each face has its own build command, listed in its README. Run the tests with:
 
 ```bash
 python -m pytest
 ```
 
-The generic code lives in [haylou-rt-tools](https://github.com/jvitorcosta/haylou-rt-tools). This
-repository only holds what's specific to Juma: the art, layout and palettes.
-[How it was made](docs/how-it-was-made.md) tells the whole story.
+## Add a face
+
+Give it a folder under `faces/`, with a `build.py`, its art and fonts, and its built files in `tbwf/`
+and `previews/`. Add a README, tests in `tests/`, a row in the table above, and any third-party
+material in [THIRD_PARTY.md](THIRD_PARTY.md). Bundle only fonts whose licence allows it.
 
 ## Licence
 
-Code is [MIT](LICENSE). The art and built faces are [CC BY 4.0](LICENSE-ART). The font is SIL OFL 1.1.
-See [THIRD_PARTY.md](THIRD_PARTY.md).
+Code is [MIT](LICENSE). Art and built faces are [CC BY 4.0](LICENSE-ART). Fonts keep their own
+licences, listed in [THIRD_PARTY.md](THIRD_PARTY.md).
 
 This is an unofficial fan project with no warranty. It isn't connected to Haylou or to Hello Haylou,
 which is an independent app by a separate developer. Those names belong to their respective owners.

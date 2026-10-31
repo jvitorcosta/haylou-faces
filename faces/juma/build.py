@@ -1,8 +1,8 @@
 """Build the Juma watch face for the Haylou RT (LS05S):
 
-    python build_face.py [palette ...]
+    python -m faces.juma.build [palette ...]
 
-With no palette named, this builds all of them into faces/ and previews/. haylou-rt-tools does the
+With no palette named, this builds all of them into tbwf/ and previews/. haylou-rt-tools does the
 generic work. Anything fixed, like the cub and icons, is drawn into the dial. Anything live, like the
 time and steps, stays as text for the app to draw.
 """
@@ -257,7 +257,7 @@ def juma_spec(palette, font=FONT):
     return spec
 
 
-def build(name, faces=ROOT / "faces", previews=ROOT / "previews"):
+def build(name, faces=ROOT / "tbwf", previews=ROOT / "previews"):
     palette = PALETTES[name]
     spec = juma_spec(palette)
     image = dial(palette)
