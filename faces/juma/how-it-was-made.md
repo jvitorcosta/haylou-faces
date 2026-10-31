@@ -98,7 +98,7 @@ caught the charset and day name rules, which the first version had missed.
 |---|---|---|
 | Wrong app tab | Custom files says "Invalid watch face file" for a `.tbwf` | Import from the **Editor** tab; Custom files only takes `.bin` |
 | Phone not visible | After replugging, it can fall back to charging | Choose **File transfer** again and check it's under This PC |
-| Copy stalls | `CopyHere` hung from PowerShell 7 | Use the toolkit's `copy_to_phone.ps1`, which runs in `powershell.exe -STA` and compares hashes |
+| Copy stalls | `CopyHere` hung from PowerShell 7 | Run it in `powershell.exe -STA`, then compare hashes |
 
 ## Still unknown
 
