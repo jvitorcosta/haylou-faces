@@ -3,6 +3,12 @@
 Custom watch faces for the **Haylou RT (LS05S)**, built with
 [haylou-rt-tools](https://github.com/jvitorcosta/haylou-rt-tools).
 
+**Status:** early. No face here is confirmed on a real watch yet.
+
+## Why I built it
+
+I made these to use the tools from haylou-rt-tools on a real face, since the Haylou RT has no official way to make your own.
+
 ## Faces
 
 | Face | Preview | About |
