@@ -1,0 +1,22 @@
+name: Face report
+description: Tell us how a face looks on your watch
+labels: ["face report"]
+body:
+  - type: input
+    id: face
+    attributes:
+      label: Face and palette
+      placeholder: Juma, pantanal
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Watch firmware and Hello Haylou version
+  - type: textarea
+    id: result
+    attributes:
+      label: How it looks
+      description: A photo of the watch beside the face's preview is the most useful thing here.
+    validations:
+      required: true
